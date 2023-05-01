@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Canvas Background="#FFFFFFFF" Width="1920" Height="1042" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:iwm="clr-namespace:Ico.Windows.Media;assembly=IcoWPF" xmlns:gwx="clr-namespace:Ico.Gwx;assembly=GwxRuntimeCore" xmlns:script="clr-namespace:Ico.Script;assembly=IcoScriptEngine" xmlns:ic="clr-namespace:Ico.Collections;assembly=IcoCollections" xmlns:ig="clr-namespace:Ico.Gdx;assembly=GdxViewControl" xmlns:iws="clr-namespace:Ico.WPF.Specialized;assembly=IcoWPFSpecialized" xmlns:igd="clr-namespace:Ico.Gdx.Data;assembly=GdxClientCommon" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:iwc="clr-namespace:Ico.Windows.Controls;assembly=IcoWPF" xmlns:gwxcmd="clr-namespace:Ico.Gwx;assembly=GwxRuntimeCoreCommands" xmlns:icc="clr-namespace:Ico.Commanding.Commands;assembly=IcoCommands">
+  <Canvas.Resources>
+    <BitmapImage x:Key="GwxThumbnailImageKey">
+      <iwm:BitmapImageInfo.StreamSource>
+        <iwm:Base64Stream Data="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" />
+      </iwm:BitmapImageInfo.StreamSource>
+    </BitmapImage>
+  </Canvas.Resources>
+  <gwx:GwxDocument.GwxDocument>
+    <gwx:GwxDocument FileVersion="10.97.212.00" ScanRate="500">
+      <gwx:GwxDocument.ScriptCodeManager>
+        <script:ScriptCodeManager>
+          <script:ScriptCodeManager.AssemblyReferences>
+            <ic:AssemblyReference AssemblyName="mscorlib" />
+            <ic:AssemblyReference AssemblyName="System" />
+            <ic:AssemblyReference AssemblyName="System.Core" />
+            <ic:AssemblyReference AssemblyName="System.Data" />
+            <ic:AssemblyReference AssemblyName="System.Xml" />
+            <ic:AssemblyReference AssemblyName="System.Drawing" />
+            <ic:AssemblyReference AssemblyName="System.Windows.Forms" />
+            <ic:AssemblyReference AssemblyName="WindowsBase" />
+            <ic:AssemblyReference AssemblyName="PresentationCore" />
+            <ic:AssemblyReference AssemblyName="PresentationFramework" />
+            <ic:AssemblyReference AssemblyName="GwxRuntimeCore" />
+            <ic:AssemblyReference AssemblyName="GwxRuntimeCoreCommands" />
+            <ic:AssemblyReference AssemblyName="GwxRuntimeViewControl" />
+            <ic:AssemblyReference AssemblyName="GwxConfigCore" />
+            <ic:AssemblyReference AssemblyName="IcoComponentModel" />
+            <ic:AssemblyReference AssemblyName="IcoFwxClientWrapper" />
+            <ic:AssemblyReference AssemblyName="IcoCommonCore.Net" />
+            <ic:AssemblyReference AssemblyName="GdxViewControl" AssemblyCodebase="file:///C:/Program Files/ICONICS/GENESIS64/Components/GdxViewControl.DLL" />
+            <ic:AssemblyReference AssemblyName="IcoWPFSpecialized" AssemblyCodebase="file:///C:/Program Files/ICONICS/GENESIS64/Components/IcoWPFSpecialized.DLL" />
+          </script:ScriptCodeManager.AssemblyReferences>
+        </script:ScriptCodeManager>
+      </gwx:GwxDocument.ScriptCodeManager>
+    </gwx:GwxDocument>
+  </gwx:GwxDocument.GwxDocument>
+  <ig:GdxViewControl FileVersion="10.97.212.00" FontFamily="Segoe UI" FontSize="12" Width="648.8" Height="251.2" Canvas.Left="151.8" Canvas.Top="244.6">
+    <ig:GdxViewControl.SubscriptionsRepository>
+      <igd:GdxSubscription Key="25425146" Name="New Subscription">
+        <igd:GdxSubscription.Fields>
+          <igd:GdxDataField IsPrimaryKey="True" Key="ID" />
+          <igd:GdxDataField Key="Name" />
+          <igd:GdxDataField Key="SĐT" />
+        </igd:GdxSubscription.Fields>
+        <igd:GdxSubscription.Tags>
+          <s:String>db:TESTDB.tabbbe</s:String>
+        </igd:GdxSubscription.Tags>
+      </igd:GdxSubscription>
+      <igd:GdxSubscription Key="17835892" Name="New Subscription">
+        <igd:GdxSubscription.Fields>
+          <igd:GdxDataField IsPrimaryKey="True" Key="ID" />
+          <igd:GdxDataField Key="Name" />
+          <igd:GdxDataField Key="SĐT" />
+        </igd:GdxSubscription.Fields>
+        <igd:GdxSubscription.Tags>
+          <s:String>db:TESTDB.gg</s:String>
+        </igd:GdxSubscription.Tags>
+      </igd:GdxSubscription>
+      <igd:GdxSubscription Key="65133811" Name="New Subscription">
+        <igd:GdxSubscription.Fields>
+          <igd:GdxDataField IsPrimaryKey="True" Key="ID" />
+          <igd:GdxDataField Key="Name" />
+          <igd:GdxDataField Key="SĐT" />
+        </igd:GdxSubscription.Fields>
+        <igd:GdxSubscription.Tags>
+          <s:String>db:TESTDB.gg</s:String>
+        </igd:GdxSubscription.Tags>
+      </igd:GdxSubscription>
+      <igd:GdxSubscription Key="59874397" Name="New Subscription">
+        <igd:GdxSubscription.Tags>
+          <s:String>db:@@TotalCacheSize</s:String>
+        </igd:GdxSubscription.Tags>
+      </igd:GdxSubscription>
+      <igd:GdxSubscription Key="2573964" Name="New Subscription">
+        <igd:GdxSubscription.Fields>
+          <igd:GdxDataField IsPrimaryKey="True" Key="ID" />
+          <igd:GdxDataField Key="Name" />
+          <igd:GdxDataField Key="SĐT" />
+        </igd:GdxSubscription.Fields>
+        <igd:GdxSubscription.Tags>
+          <s:String>db:TESTDB.gg</s:String>
+        </igd:GdxSubscription.Tags>
+      </igd:GdxSubscription>
+    </ig:GdxViewControl.SubscriptionsRepository>
+    <ig:GdxViewControl.Items>
+      <iwc:MultipleTabItem IsSelected="True" Header="Tab">
+        <ig:GdxGridView SubscriptionID="2573964" Uid="local:GdxView_1">
+          <ig:GdxGridView.Columns>
+            <ig:GdxColumn Key="ID" Format="{x:Null}" Text="ID" />
+            <ig:GdxColumn Key="Name" Index="1" Format="{x:Null}" Text="Name" />
+            <ig:GdxColumn Key="SĐT" Index="2" Format="{x:Null}" Text="SĐT" />
+          </ig:GdxGridView.Columns>
+        </ig:GdxGridView>
+      </iwc:MultipleTabItem>
+    </ig:GdxViewControl.Items>
+  </ig:GdxViewControl>
+  <Label BorderBrush="#FF000000" BorderThickness="1,1,1,1" Background="#FFFFFFFF" Foreground="#FF000000" FontFamily="Segoe UI" FontSize="12" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsTabStop="True" Padding="1,1,1,1" Name="Label1" Width="216" Height="69.6" Canvas.Left="170.2" Canvas.Top="119" gwx:GwxProperties.Stretch="Uniform">
+    <gwx:GwxDynamicGroup.GwxDynamicGroup>
+      <gwx:GwxDynamicGroup>
+        <gwx:GwxDynamicGroup.DynamicsList>
+          <gwx:GwxProcessPoint AnimationMode="Analog" DataSource="db:TESTDB.kkl.@ID" DragDropDataSource="True" Control="True" />
+        </gwx:GwxDynamicGroup.DynamicsList>
+      </gwx:GwxDynamicGroup>
+    </gwx:GwxDynamicGroup.GwxDynamicGroup>
+    <TextBlock Text="*" TextTrimming="CharacterEllipsis" LayoutTransform="4.11027568922306,0,0,4.11027568922306,0,0" />
+  </Label>
+  <Button FontFamily="Segoe UI" FontSize="12" Name="Button1" Width="206.4" Height="56" Canvas.Left="503" Canvas.Top="120.6" gwx:GwxProperties.Stretch="Uniform">
+    <gwx:GwxDynamicGroup.GwxDynamicGroup>
+      <gwx:GwxDynamicGroup>
+        <gwx:GwxDynamicGroup.DynamicsList>
+          <gwx:GwxPick LeftMouseButton="True" ExecuteOnUp="True" DataSource="db:TESTDB.kkl&lt;@ID=''&gt;.@@Execute" Control="True">
+            <gwx:GwxPick.CommandParameters>
+              <gwxcmd:WriteValueCommand OnUpValue="1" />
+            </gwx:GwxPick.CommandParameters>
+          </gwx:GwxPick>
+        </gwx:GwxDynamicGroup.DynamicsList>
+      </gwx:GwxDynamicGroup>
+    </gwx:GwxDynamicGroup.GwxDynamicGroup>
+    <TextBlock Text="Button" LayoutTransform="3.25814536340852,0,0,3.25814536340852,0,0" />
+  </Button>
+  <Button FontFamily="Segoe UI" FontSize="12" Name="Button2" Width="269.6" Height="48.8" Canvas.Left="383.8" Canvas.Top="518.2" gwx:GwxProperties.Stretch="Uniform">
+    <gwx:GwxDynamicGroup.GwxDynamicGroup>
+      <gwx:GwxDynamicGroup>
+        <gwx:GwxDynamicGroup.DynamicsList>
+          <gwx:GwxPick LeftMouseButton="True" ExecuteOnUp="True" Control="True">
+            <gwx:GwxPick.CommandParameters>
+              <gwxcmd:IcoCommandingCommand>
+                <gwxcmd:IcoCommandingCommand.Command>
+                  <icc:GroupCommandData ItemName="{}{{db:TESTDB.gg[Name]}}" Target="viewer" />
+                </gwxcmd:IcoCommandingCommand.Command>
+              </gwxcmd:IcoCommandingCommand>
+            </gwx:GwxPick.CommandParameters>
+          </gwx:GwxPick>
+        </gwx:GwxDynamicGroup.DynamicsList>
+      </gwx:GwxDynamicGroup>
+    </gwx:GwxDynamicGroup.GwxDynamicGroup>
+    <TextBlock Text="Button" LayoutTransform="2.80701754385965,0,0,2.80701754385965,0,0" />
+  </Button>
+</Canvas>

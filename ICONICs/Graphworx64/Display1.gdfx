@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Canvas Background="#FFFFFFFF" Name="ThisDisplay1" Width="1920" Height="1042" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:iwm="clr-namespace:Ico.Windows.Media;assembly=IcoWPF" xmlns:gwx="clr-namespace:Ico.Gwx;assembly=GwxRuntimeCore" xmlns:script="clr-namespace:Ico.Script;assembly=IcoScriptEngine" xmlns:ic="clr-namespace:Ico.Collections;assembly=IcoCollections" xmlns:gwxcmd="clr-namespace:Ico.Gwx;assembly=GwxRuntimeCoreCommands" xmlns:icc="clr-namespace:Ico.Commanding.Commands;assembly=IcoCommands" xmlns:ig="clr-namespace:Ico.Gdx;assembly=GdxViewControl" xmlns:iws="clr-namespace:Ico.WPF.Specialized;assembly=IcoWPFSpecialized" xmlns:igd="clr-namespace:Ico.Gdx.Data;assembly=GdxClientCommon" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:iwc="clr-namespace:Ico.Windows.Controls;assembly=IcoWPF">
+  <Canvas.Resources>
+    <BitmapImage x:Key="GwxThumbnailImageKey">
+      <iwm:BitmapImageInfo.StreamSource>
+        <iwm:Base64Stream Data="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" />
+      </iwm:BitmapImageInfo.StreamSource>
+    </BitmapImage>
+  </Canvas.Resources>
+  <gwx:GwxDocument.GwxDocument>
+    <gwx:GwxDocument FileVersion="10.97.212.00" ScanRate="500">
+      <gwx:GwxDocument.ScriptCodeManager>
+        <script:ScriptCodeManager>
+          <script:ScriptCodeManager.Scripts>
+            <script:ScriptCode Name="JScriptDotNetGlobalVariablesCode" Type="JScriptNet" EditorBrowsable="Never">
+              <x:XData><![CDATA[
+var ThisWindow : Ico.Gwx.GwxRuntimeViewControl;
+var ThisDocument : Ico.Gwx.GwxDocument;
+var ThisConfiguration : Ico.Gwx.GwxConfiguration;
+]]></x:XData>
+            </script:ScriptCode>
+            <script:ScriptCode Name="ScriptModule1" Type="JScriptNet" />
+          </script:ScriptCodeManager.Scripts>
+          <script:ScriptCodeManager.AssemblyReferences>
+            <ic:AssemblyReference AssemblyName="mscorlib" />
+            <ic:AssemblyReference AssemblyName="System" />
+            <ic:AssemblyReference AssemblyName="System.Core" />
+            <ic:AssemblyReference AssemblyName="System.Data" />
+            <ic:AssemblyReference AssemblyName="System.Xml" />
+            <ic:AssemblyReference AssemblyName="System.Drawing" />
+            <ic:AssemblyReference AssemblyName="System.Windows.Forms" />
+            <ic:AssemblyReference AssemblyName="WindowsBase" />
+            <ic:AssemblyReference AssemblyName="PresentationCore" />
+            <ic:AssemblyReference AssemblyName="PresentationFramework" />
+            <ic:AssemblyReference AssemblyName="GwxRuntimeCore" />
+            <ic:AssemblyReference AssemblyName="GwxRuntimeCoreCommands" />
+            <ic:AssemblyReference AssemblyName="GwxRuntimeViewControl" />
+            <ic:AssemblyReference AssemblyName="GwxConfigCore" />
+            <ic:AssemblyReference AssemblyName="IcoComponentModel" />
+            <ic:AssemblyReference AssemblyName="IcoFwxClientWrapper" />
+            <ic:AssemblyReference AssemblyName="IcoCommonCore.Net" />
+            <ic:AssemblyReference AssemblyName="GdxViewControl" AssemblyCodebase="file:///C:/Program Files/ICONICS/GENESIS64/Components/GdxViewControl.DLL" />
+            <ic:AssemblyReference AssemblyName="IcoWPFSpecialized" AssemblyCodebase="file:///C:/Program Files/ICONICS/GENESIS64/Components/IcoWPFSpecialized.DLL" />
+          </script:ScriptCodeManager.AssemblyReferences>
+        </script:ScriptCodeManager>
+      </gwx:GwxDocument.ScriptCodeManager>
+    </gwx:GwxDocument>
+  </gwx:GwxDocument.GwxDocument>
+  <gwx:GwxDynamicGroup.GwxDynamicGroup>
+    <gwx:GwxDynamicGroup>
+      <gwx:GwxDynamicGroup.DynamicsList>
+        <gwx:GwxPickFunctionKey ExecuteOnUp="True" DataSource="x=setvalue({{@ProductName}}, &quot;Chai&quot;)" DataComparison="EqualZero" Control="True">
+          <gwx:GwxPickFunctionKey.CommandParameters>
+            <gwxcmd:ScriptCommand />
+          </gwx:GwxPickFunctionKey.CommandParameters>
+        </gwx:GwxPickFunctionKey>
+      </gwx:GwxDynamicGroup.DynamicsList>
+    </gwx:GwxDynamicGroup>
+  </gwx:GwxDynamicGroup.GwxDynamicGroup>
+  <Button FontFamily="Segoe UI" FontSize="12" Name="Button1" Width="220.8" Height="44" Canvas.Left="88.6" Canvas.Top="96.6" gwx:GwxProperties.Stretch="Uniform">
+    <gwx:GwxDynamicGroup.GwxDynamicGroup>
+      <gwx:GwxDynamicGroup>
+        <gwx:GwxDynamicGroup.DynamicsList>
+          <gwx:GwxPick LeftMouseButton="True" ExecuteOnUp="True" Control="True">
+            <gwx:GwxPick.CommandParameters>
+              <gwxcmd:IcoCommandingCommand>
+                <gwxcmd:IcoCommandingCommand.Command>
+                  <icc:CustomCommandData />
+                </gwxcmd:IcoCommandingCommand.Command>
+              </gwxcmd:IcoCommandingCommand>
+            </gwx:GwxPick.CommandParameters>
+          </gwx:GwxPick>
+        </gwx:GwxDynamicGroup.DynamicsList>
+      </gwx:GwxDynamicGroup>
+    </gwx:GwxDynamicGroup.GwxDynamicGroup>
+    <TextBlock Text="Button" LayoutTransform="2.5062656641604,0,0,2.5062656641604,0,0" />
+  </Button>
+  <Label BorderBrush="#FF000000" BorderThickness="1,1,1,1" Background="#FFFFFFFF" Foreground="#FF000000" FontFamily="Segoe UI" FontSize="12" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsTabStop="True" Padding="1,1,1,1" Name="Label1" Width="299.2" Height="81.6" Canvas.Left="474.2" Canvas.Top="144.6" gwx:GwxProperties.Stretch="Uniform">
+    <gwx:GwxDynamicGroup.GwxDynamicGroup>
+      <gwx:GwxDynamicGroup>
+        <gwx:GwxDynamicGroup.DynamicsList>
+          <gwx:GwxProcessPoint AnimationMode="Analog" DataSource="db:Northwind.Orders" Control="True" />
+        </gwx:GwxDynamicGroup.DynamicsList>
+      </gwx:GwxDynamicGroup>
+    </gwx:GwxDynamicGroup.GwxDynamicGroup>
+    <TextBlock Text="*" TextTrimming="CharacterEllipsis" LayoutTransform="4.86215538847118,0,0,4.86215538847118,0,0" />
+  </Label>
+  <ig:GdxViewControl FileVersion="10.97.212.00" FontFamily="Segoe UI" FontSize="12" Width="456" Height="303.2" Canvas.Left="143.8" Canvas.Top="248.6">
+    <ig:GdxViewControl.SubscriptionsRepository>
+      <igd:GdxSubscription Key="38327104" Name="New Subscription">
+        <igd:GdxSubscription.Fields>
+          <igd:GdxDataField IsPrimaryKey="True" IsReadOnly="True" Key="ProductID" BuiltInType="Int32" />
+          <igd:GdxDataField Key="ProductName" />
+          <igd:GdxDataField Key="SupplierID" BuiltInType="Int32" />
+          <igd:GdxDataField Key="CategoryID" BuiltInType="Int32" />
+          <igd:GdxDataField Key="QuantityPerUnit" />
+          <igd:GdxDataField Key="UnitPrice" BuiltInType="Decimal" />
+          <igd:GdxDataField Key="UnitsInStock" BuiltInType="Int16" />
+          <igd:GdxDataField Key="UnitsOnOrder" BuiltInType="Int16" />
+          <igd:GdxDataField Key="ReorderLevel" BuiltInType="Int16" />
+          <igd:GdxDataField Key="Discontinued" BuiltInType="Boolean" />
+        </igd:GdxSubscription.Fields>
+        <igd:GdxSubscription.Tags>
+          <s:String>db:Northwind.test&lt;@ProductName=''&gt;</s:String>
+        </igd:GdxSubscription.Tags>
+      </igd:GdxSubscription>
+    </ig:GdxViewControl.SubscriptionsRepository>
+    <ig:GdxViewControl.Items>
+      <iwc:MultipleTabItem IsSelected="True" Header="Tab">
+        <ig:GdxGridView SubscriptionID="38327104" Uid="local:GdxView_1">
+          <ig:GdxGridView.Columns>
+            <ig:GdxColumn Key="ProductID" Format="{x:Null}" Text="ProductID" />
+            <ig:GdxColumn Key="ProductName" Index="1" Format="{x:Null}" Text="ProductName" />
+            <ig:GdxColumn Key="SupplierID" Index="2" Format="{x:Null}" Text="SupplierID" />
+            <ig:GdxColumn Key="CategoryID" Index="3" Format="{x:Null}" Text="CategoryID" />
+            <ig:GdxColumn Key="QuantityPerUnit" Index="4" Format="{x:Null}" Text="QuantityPerUnit" />
+            <ig:GdxColumn Key="UnitPrice" Index="5" Format="{x:Null}" Text="UnitPrice" />
+            <ig:GdxColumn Key="UnitsInStock" Index="6" Format="{x:Null}" Text="UnitsInStock" />
+            <ig:GdxColumn Key="UnitsOnOrder" Index="7" Format="{x:Null}" Text="UnitsOnOrder" />
+            <ig:GdxColumn Key="ReorderLevel" Index="8" Format="{x:Null}" Text="ReorderLevel" />
+            <ig:GdxColumn Key="Discontinued" Index="9" Format="{x:Null}" Text="Discontinued" />
+          </ig:GdxGridView.Columns>
+        </ig:GdxGridView>
+      </iwc:MultipleTabItem>
+    </ig:GdxViewControl.Items>
+  </ig:GdxViewControl>
+</Canvas>

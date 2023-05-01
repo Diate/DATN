@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Canvas Background="#FFFFFFFF" Width="1920" Height="1042" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:iwm="clr-namespace:Ico.Windows.Media;assembly=IcoWPF" xmlns:gwx="clr-namespace:Ico.Gwx;assembly=GwxRuntimeCore" xmlns:script="clr-namespace:Ico.Script;assembly=IcoScriptEngine" xmlns:ic="clr-namespace:Ico.Collections;assembly=IcoCollections" xmlns:gwxcmd="clr-namespace:Ico.Gwx;assembly=GwxRuntimeCoreCommands" xmlns:gwx3d="clr-namespace:Ico.Gwx;assembly=Gwx3DControl" xmlns:ico3d="clr-namespace:Ico.Windows.Media.Media3D;assembly=Ico3DControlsLibrary" xmlns:ig="clr-namespace:Ico.Gwx;assembly=GwxRuntimeViewControl">
+  <Canvas.Resources>
+    <BitmapImage x:Key="GwxThumbnailImageKey">
+      <iwm:BitmapImageInfo.StreamSource>
+        <iwm:Base64Stream Data="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" />
+      </iwm:BitmapImageInfo.StreamSource>
+    </BitmapImage>
+  </Canvas.Resources>
+  <gwx:GwxDocument.GwxDocument>
+    <gwx:GwxDocument FileVersion="10.97.212.00" ScanRate="500">
+      <gwx:GwxDocument.ScriptCodeManager>
+        <script:ScriptCodeManager>
+          <script:ScriptCodeManager.AssemblyReferences>
+            <ic:AssemblyReference AssemblyName="mscorlib" />
+            <ic:AssemblyReference AssemblyName="System" />
+            <ic:AssemblyReference AssemblyName="System.Core" />
+            <ic:AssemblyReference AssemblyName="System.Data" />
+            <ic:AssemblyReference AssemblyName="System.Xml" />
+            <ic:AssemblyReference AssemblyName="System.Drawing" />
+            <ic:AssemblyReference AssemblyName="System.Windows.Forms" />
+            <ic:AssemblyReference AssemblyName="WindowsBase" />
+            <ic:AssemblyReference AssemblyName="PresentationCore" />
+            <ic:AssemblyReference AssemblyName="PresentationFramework" />
+            <ic:AssemblyReference AssemblyName="GwxRuntimeCore" />
+            <ic:AssemblyReference AssemblyName="GwxRuntimeCoreCommands" />
+            <ic:AssemblyReference AssemblyName="GwxRuntimeViewControl" />
+            <ic:AssemblyReference AssemblyName="GwxConfigCore" />
+            <ic:AssemblyReference AssemblyName="IcoComponentModel" />
+            <ic:AssemblyReference AssemblyName="IcoFwxClientWrapper" />
+            <ic:AssemblyReference AssemblyName="IcoCommonCore.Net" />
+            <ic:AssemblyReference AssemblyName="Gwx3DControl" AssemblyCodebase="file:///C:/Program Files/ICONICS/GENESIS64/Components/Gwx3DControl.DLL" />
+            <ic:AssemblyReference AssemblyName="Ico3DControlsLibrary" AssemblyCodebase="file:///C:/Program Files/ICONICS/GENESIS64/Components/Ico3DControlsLibrary.DLL" />
+          </script:ScriptCodeManager.AssemblyReferences>
+        </script:ScriptCodeManager>
+      </gwx:GwxDocument.ScriptCodeManager>
+    </gwx:GwxDocument>
+  </gwx:GwxDocument.GwxDocument>
+  <Rectangle Fill="#FF66CF96" Stroke="#FF000000" Name="Rectangle1" Width="145" Height="276" Canvas.Left="528" Canvas.Top="202">
+    <gwx:GwxDynamicGroup.GwxDynamicGroup>
+      <gwx:GwxDynamicGroup>
+        <gwx:GwxDynamicGroup.DynamicsList>
+          <gwx:GwxSize SizeVertical="True" VerticalAnchor="1" AnimationMode="Analog" DataSource="localsim:ramp" />
+        </gwx:GwxDynamicGroup.DynamicsList>
+      </gwx:GwxDynamicGroup>
+    </gwx:GwxDynamicGroup.GwxDynamicGroup>
+  </Rectangle>
+  <Button FontFamily="Segoe UI" FontSize="12" Name="Button1" Width="153" Height="67" Canvas.Left="72" Canvas.Top="103" gwx:GwxProperties.Stretch="Uniform">
+    <gwx:GwxDynamicGroup.GwxDynamicGroup>
+      <gwx:GwxDynamicGroup>
+        <gwx:GwxDynamicGroup.DynamicsList>
+          <gwx:GwxPick LeftMouseButton="True" ExecuteOnUp="True" Control="True">
+            <gwx:GwxPick.CommandParameters>
+              <gwxcmd:LoadDisplayCommand />
+            </gwx:GwxPick.CommandParameters>
+          </gwx:GwxPick>
+        </gwx:GwxDynamicGroup.DynamicsList>
+      </gwx:GwxDynamicGroup>
+    </gwx:GwxDynamicGroup.GwxDynamicGroup>
+    <TextBlock Text="Main" LayoutTransform="3.94736842105263,0,0,3.94736842105263,0,0" />
+  </Button>
+  <Button FontFamily="Segoe UI" FontSize="12" Name="Button2" Width="153" Height="67" Canvas.Left="287" Canvas.Top="104" gwx:GwxProperties.Stretch="Uniform">
+    <gwx:GwxDynamicGroup.GwxDynamicGroup>
+      <gwx:GwxDynamicGroup>
+        <gwx:GwxDynamicGroup.DynamicsList>
+          <gwx:GwxPick LeftMouseButton="True" ExecuteOnUp="True" Control="True">
+            <gwx:GwxPick.CommandParameters>
+              <gwxcmd:LoadDisplayCommand FileName="popup.gdfx" TargetType="DisplayOwnedModalPopup" />
+            </gwx:GwxPick.CommandParameters>
+          </gwx:GwxPick>
+        </gwx:GwxDynamicGroup.DynamicsList>
+      </gwx:GwxDynamicGroup>
+    </gwx:GwxDynamicGroup.GwxDynamicGroup>
+    <TextBlock Text="trend" LayoutTransform="3.94736842105263,0,0,3.94736842105263,0,0" />
+  </Button>
+  <gwx3d:Gwx3DControl FontFamily="Segoe UI" FontSize="12" Width="395" Height="225" FocusVisualStyle="{x:Null}" Canvas.Left="97" Canvas.Top="259">
+    <gwx3d:Gwx3DControl.MainCamera>
+      <ico3d:CameraInfo>
+        <ico3d:CameraInfo.Camera>
+          <PerspectiveCamera FarPlaneDistance="1600" Position="5,10,15" LookDirection="-5,-10,-15" UpDirection="0,1,0" />
+        </ico3d:CameraInfo.Camera>
+      </ico3d:CameraInfo>
+    </gwx3d:Gwx3DControl.MainCamera>
+    <gwx3d:Gwx3DControl.PerspectiveCameraInfo>
+      <ico3d:CameraInfo Name="Perspective" ObjectName="Perspective">
+        <ico3d:CameraInfo.Camera>
+          <PerspectiveCamera FarPlaneDistance="1600" Position="5,10,15" LookDirection="-5,-10,-15" UpDirection="0,1,0" />
+        </ico3d:CameraInfo.Camera>
+      </ico3d:CameraInfo>
+    </gwx3d:Gwx3DControl.PerspectiveCameraInfo>
+    <gwx3d:GwxViewPlane3D Direction="0,0,1">
+      <gwx3d:GwxViewPlane3D.GwxView>
+        <ig:GwxRuntimeViewControl AutoStartRuntime="True" Background="#FFFFFFFF" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" />
+      </gwx3d:GwxViewPlane3D.GwxView>
+    </gwx3d:GwxViewPlane3D>
+  </gwx3d:Gwx3DControl>
+</Canvas>

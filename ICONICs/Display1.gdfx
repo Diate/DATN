@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Canvas Background="#FFFFFFFF" Width="1920" Height="1042" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:iwm="clr-namespace:Ico.Windows.Media;assembly=IcoWPF" xmlns:gwx="clr-namespace:Ico.Gwx;assembly=GwxRuntimeCore" xmlns:gwxcmd="clr-namespace:Ico.Gwx;assembly=GwxRuntimeCoreCommands" xmlns:s="clr-namespace:System;assembly=mscorlib">
+  <Canvas.Resources>
+    <BitmapImage x:Key="GwxThumbnailImageKey">
+      <iwm:BitmapImageInfo.StreamSource>
+        <iwm:Base64Stream Data="iVBORw0KGgoAAAANSUhEUgAAAQAAAACKCAYAAABFLpRsAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAUfSURBVHhe7d09SBxbHIbx/6oYFPxAojEWEoUUNippbBdEbKzUImUQohC0EMxGSCGI2AgJKCiIIBaC9gYLK1E7QYlFUkSxSEgTURPJ12rO3TN3LjdcyM1K3C/f5wdi5qgQi3k8Z2b2bMQlGABJeeFnAIIIACCMAADCCAAgjAAAwggAIIwAAMIIACCMAADCCAAgjAAAwggAIIwAAMIIACCMAADCCAAgjAAAwggAIIwAAMIIACCMAADCCAAgjAAAwggAIIwAAMIIACCMAADCCAAgjAAAwggAICzr3h7848ePVlxcHB5lv8+fP1tpaWl4BOSWrAvA+fm5FRQUhEfZL9f+v8DPWAIAwggAIEwmAH19fVm11LlK1/l3Q2pd+wC8e/fONTU1BSdIe3u729raujYny8zMjHv48KF78+aNRaNRIoBLk7gIuLOz4+7duxeZnJx0AwMDkXD4SmT6IuCjR4/cixcv7PDw0CIJ4TCQFIklwPDwsC0vL7u5ublw5PpYXV21WCxmibiFI0DyuA34h7gNiFzGXQBAGAEAhBEAQBgBAITxYqA/xIuBkMuyLgAA0oclACCMAADCCAAgjAAAwggAIIwAAMIIACCMAADCCAAgLKufBDw4OLC8vPQ26sePH1ZfXx8epYf/Pf2+AiUlJXb79u1wFEi9rA6A3+bKn5Dp5INz586d8Ch1/Am/t7dnZ2dnVlVVFYx9//7djo+P7caNG9bS0hKMAanEEiADvnz5Ypubm8GLnv45+b3CwkK7detWMBPw+/wBqZazAUhMm53fDvv+/ftuZWXFxeNx9+3bt9/OZr5+/eouLi4yOut5/fr1/0718/Pzra6uzjY2NsIRIDVyNgAjIyM2NjZmS0tLkWg0alNTU7a+vh5+9deGhobs6OgoPEq/t2/fJrWHoI+A/75EsMIR4OrlbABu3rxpCwsL5v+a+z0E1tbWbHp62l6+fOlisZh79uyZ6+7udonptuvv73c9PT1uYmLC7e7u2uDgoJ2enmZkFvDhw4dgqp+MiooK/74G4RFw9XI2AM+fP4/4aXJnZ2dwIa2trc3vkW+NjY0R/7msrMw+ffoUfHijo6P2+PHjSHNzs/9Z//WM7KF/2YuaiWVN+C/g6uX0RcCurq7I+Pi4zc7OhiPBjkLu6dOn1tHRYXfv3g1H/77Alg0ue1vTLwWAVMnZAPT29roHDx64J0+eWGtrq9XW1tri4qK9evUq2FZsfn7etre3w+/+V01NTTAbSMwaMrIE8Lf4kuVvC7LdGFKJ5wD+I9XPAfhbgP69/JKZkZycnPA8AFIqp5cAuaioqMgqKyt/GzZ/sdBf4wBSKasD4E8S/xc5nR/pmHFUV1dbeXn5L2/xvX//PljS/PyQEJAK7AqcQX45sL+/H6z14/F4sCzw9/4bGhp4v0GkBQEAhHENABBGAABhBAAQRgAAYQQAEEYAAGEEABBGAABhBAAQRgAAYQQAEEYAAGEEABBGAABhBAAQRgAAYQQAEEYAAGEEABBGAABhBAAQRgAAYQQAEEYAAGEEABBGAABhBAAQRgAAYQQAEEYAAGEEABBGAABhBAAQRgAAYQQAEEYAAGEEABBGAABhBAAQRgAAYQQAEEYAAGEEABBGAABhBAAQRgAAYQQAEEYAAGEEABBGAABhBAAQRgAAYQQAEEYAAGEEABBGAABhBAAQRgAAYQQAEEYAAGEEABBGAABhBAAQRgAAYQQAEEYAAGEEABBGAABhBACQZfYXtlB907pa8LAAAAAASUVORK5CYII=" />
+      </iwm:BitmapImageInfo.StreamSource>
+    </BitmapImage>
+  </Canvas.Resources>
+  <gwx:GwxDocument.GwxDocument>
+    <gwx:GwxDocument FileVersion="10.97.212.00" ScanRate="500" />
+  </gwx:GwxDocument.GwxDocument>
+  <Label BorderBrush="#FF000000" BorderThickness="1,1,1,1" Background="#FFFFFFFF" Foreground="#FF000000" FontFamily="Segoe UI" FontSize="12" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsTabStop="True" Padding="1,1,1,1" Name="Label1" Width="334" Height="107" gwx:GwxProperties.Stretch="Uniform" Canvas.Left="273" Canvas.Top="233">
+    <gwx:GwxDynamicGroup.GwxDynamicGroup>
+      <gwx:GwxDynamicGroup>
+        <gwx:GwxDynamicGroup.DynamicsList>
+          <gwx:GwxProcessPoint DecimalPlaces="0" AnimationMode="Analog" DataSource="localsim::S1:Int16" Control="True" />
+        </gwx:GwxDynamicGroup.DynamicsList>
+      </gwx:GwxDynamicGroup>
+    </gwx:GwxDynamicGroup.GwxDynamicGroup>
+    <TextBlock Text="*" TextTrimming="CharacterEllipsis" LayoutTransform="6.45363408521303,0,0,6.45363408521303,0,0" />
+  </Label>
+  <Label FontFamily="Segoe UI" FontSize="12" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsTabStop="True" Padding="1,1,1,1" Name="Label2" Width="203" Height="94" gwx:GwxProperties.Stretch="Uniform" Canvas.Left="748" Canvas.Top="240">
+    <gwx:GwxDynamicGroup.GwxDynamicGroup>
+      <gwx:GwxDynamicGroup>
+        <gwx:GwxDynamicGroup.DynamicsList>
+          <gwx:GwxProcessPoint DecimalPlaces="0" AnimationMode="Analog" DataSource="localsim::S1:Int16" />
+        </gwx:GwxDynamicGroup.DynamicsList>
+      </gwx:GwxDynamicGroup>
+    </gwx:GwxDynamicGroup.GwxDynamicGroup>
+    <TextBlock Text="*" TextTrimming="CharacterEllipsis" LayoutTransform="5.76441102756892,0,0,5.76441102756892,0,0" />
+  </Label>
+  <Button Foreground="#FF000000" FontFamily="Segoe UI" FontSize="12" Name="Button1" Width="222" Height="85" gwx:GwxProperties.Stretch="Uniform" Canvas.Left="294" Canvas.Top="415">
+    <gwx:GwxDynamicGroup.GwxDynamicGroup>
+      <gwx:GwxDynamicGroup>
+        <gwx:GwxDynamicGroup.DynamicsList>
+          <gwx:GwxColor TargetPropertyName="Foreground" UseStartColor="True" StartBrush="#FFB8CCE4" UseEndColor="True" EndBrush="#FFB0DFA0" AnimationMode="Discrete" DataSource="localsim::Start:Boolean" />
+          <gwx:GwxPick LeftMouseButton="True" ExecuteOnUp="True" DataSource="localsim::Start:Boolean" Control="True">
+            <gwx:GwxPick.CommandParameters>
+              <gwxcmd:ToggleValueCommand>
+                <gwxcmd:ToggleValueCommand.Values>
+                  <s:String>1</s:String>
+                  <s:String>0</s:String>
+                </gwxcmd:ToggleValueCommand.Values>
+              </gwxcmd:ToggleValueCommand>
+            </gwx:GwxPick.CommandParameters>
+          </gwx:GwxPick>
+        </gwx:GwxDynamicGroup.DynamicsList>
+      </gwx:GwxDynamicGroup>
+    </gwx:GwxDynamicGroup.GwxDynamicGroup>
+    <TextBlock Text="Start" LayoutTransform="5.07518796992481,0,0,5.07518796992481,0,0" />
+  </Button>
+  <Ellipse Fill="#FFD8D8D8" Stroke="#FF000000" Name="Ellipse1" Width="91" Height="91" Canvas.Left="692" Canvas.Top="417">
+    <gwx:GwxDynamicGroup.GwxDynamicGroup>
+      <gwx:GwxDynamicGroup>
+        <gwx:GwxDynamicGroup.DynamicsList>
+          <gwx:GwxColor TargetPropertyName="Fill" UseStartColor="True" StartBrush="#FF93CDDC" UseEndColor="True" EndBrush="#FFFFFF66" AnimationMode="Discrete" DataSource="localsim::Start:Boolean" />
+        </gwx:GwxDynamicGroup.DynamicsList>
+      </gwx:GwxDynamicGroup>
+    </gwx:GwxDynamicGroup.GwxDynamicGroup>
+  </Ellipse>
+</Canvas>

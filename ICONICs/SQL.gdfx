@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Canvas Background="#FFFFFFFF" Width="1920" Height="1042" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:iwm="clr-namespace:Ico.Windows.Media;assembly=IcoWPF" xmlns:gwx="clr-namespace:Ico.Gwx;assembly=GwxRuntimeCore" xmlns:script="clr-namespace:Ico.Script;assembly=IcoScriptEngine" xmlns:ic="clr-namespace:Ico.Collections;assembly=IcoCollections" xmlns:ig="clr-namespace:Ico.Gdx;assembly=GdxViewControl" xmlns:iws="clr-namespace:Ico.WPF.Specialized;assembly=IcoWPFSpecialized" xmlns:igd="clr-namespace:Ico.Gdx.Data;assembly=GdxClientCommon" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:iwc="clr-namespace:Ico.Windows.Controls;assembly=IcoWPF">
+  <Canvas.Resources>
+    <BitmapImage x:Key="GwxThumbnailImageKey">
+      <iwm:BitmapImageInfo.StreamSource>
+        <iwm:Base64Stream Data="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" />
+      </iwm:BitmapImageInfo.StreamSource>
+    </BitmapImage>
+  </Canvas.Resources>
+  <gwx:GwxDocument.GwxDocument>
+    <gwx:GwxDocument FileVersion="10.97.212.00" ScanRate="500">
+      <gwx:GwxDocument.ScriptCodeManager>
+        <script:ScriptCodeManager>
+          <script:ScriptCodeManager.AssemblyReferences>
+            <ic:AssemblyReference AssemblyName="mscorlib" />
+            <ic:AssemblyReference AssemblyName="System" />
+            <ic:AssemblyReference AssemblyName="System.Core" />
+            <ic:AssemblyReference AssemblyName="System.Data" />
+            <ic:AssemblyReference AssemblyName="System.Xml" />
+            <ic:AssemblyReference AssemblyName="System.Drawing" />
+            <ic:AssemblyReference AssemblyName="System.Windows.Forms" />
+            <ic:AssemblyReference AssemblyName="WindowsBase" />
+            <ic:AssemblyReference AssemblyName="PresentationCore" />
+            <ic:AssemblyReference AssemblyName="PresentationFramework" />
+            <ic:AssemblyReference AssemblyName="GwxRuntimeCore" />
+            <ic:AssemblyReference AssemblyName="GwxRuntimeCoreCommands" />
+            <ic:AssemblyReference AssemblyName="GwxRuntimeViewControl" />
+            <ic:AssemblyReference AssemblyName="GwxConfigCore" />
+            <ic:AssemblyReference AssemblyName="IcoComponentModel" />
+            <ic:AssemblyReference AssemblyName="IcoFwxClientWrapper" />
+            <ic:AssemblyReference AssemblyName="IcoCommonCore.Net" />
+            <ic:AssemblyReference AssemblyName="GdxViewControl" AssemblyCodebase="file:///C:/Program Files/ICONICS/GENESIS64/Components/GdxViewControl.DLL" />
+            <ic:AssemblyReference AssemblyName="IcoWPFSpecialized" AssemblyCodebase="file:///C:/Program Files/ICONICS/GENESIS64/Components/IcoWPFSpecialized.DLL" />
+          </script:ScriptCodeManager.AssemblyReferences>
+        </script:ScriptCodeManager>
+      </gwx:GwxDocument.ScriptCodeManager>
+    </gwx:GwxDocument>
+  </gwx:GwxDocument.GwxDocument>
+  <ig:GdxViewControl FileVersion="10.97.212.00" FontFamily="Segoe UI" FontSize="12" Width="557.6" Height="319.2" Canvas.Left="80.6" Canvas.Top="187.8">
+    <ig:GdxViewControl.SubscriptionsRepository>
+      <igd:GdxSubscription Key="5111875" Name="New Subscription">
+        <igd:GdxSubscription.Fields>
+          <igd:GdxDataField IsPrimaryKey="True" Key="ID" />
+          <igd:GdxDataField Key="Name" />
+          <igd:GdxDataField Key="SĐT" />
+        </igd:GdxSubscription.Fields>
+        <igd:GdxSubscription.Tags>
+          <s:String>db:TESTDB.tabbbe</s:String>
+        </igd:GdxSubscription.Tags>
+      </igd:GdxSubscription>
+    </ig:GdxViewControl.SubscriptionsRepository>
+    <ig:GdxViewControl.Items>
+      <iwc:MultipleTabItem IsSelected="True" Header="Tab">
+        <ig:GdxGridView SubscriptionID="5111875" Uid="local:GdxView_1">
+          <ig:GdxGridView.Columns>
+            <ig:GdxColumn Key="ID" Format="{x:Null}" Text="ID" />
+            <ig:GdxColumn Key="Name" Index="1" Format="{x:Null}" Text="Name" />
+            <ig:GdxColumn Key="SĐT" Index="2" Format="{x:Null}" Text="SĐT" />
+          </ig:GdxGridView.Columns>
+        </ig:GdxGridView>
+      </iwc:MultipleTabItem>
+    </ig:GdxViewControl.Items>
+  </ig:GdxViewControl>
+  <Label BorderBrush="#FF000000" BorderThickness="1,1,1,1" Background="#FFFFFFFF" Foreground="#FF000000" FontFamily="Segoe UI" FontSize="12" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsTabStop="True" Padding="1,1,1,1" Name="Label1" Width="120" Height="47.2" Canvas.Left="86.2" Canvas.Top="111" gwx:GwxProperties.Stretch="Uniform">
+    <gwx:GwxDynamicGroup.GwxDynamicGroup>
+      <gwx:GwxDynamicGroup>
+        <gwx:GwxDynamicGroup.DynamicsList>
+          <gwx:GwxProcessPoint AnimationMode="Analog" DataSource="db:TESTDB" Control="True" />
+        </gwx:GwxDynamicGroup.DynamicsList>
+      </gwx:GwxDynamicGroup>
+    </gwx:GwxDynamicGroup.GwxDynamicGroup>
+    <TextBlock Text="*" TextTrimming="CharacterEllipsis" LayoutTransform="2.70676691729323,0,0,2.70676691729323,0,0" />
+  </Label>
+</Canvas>

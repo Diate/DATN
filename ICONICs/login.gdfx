@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Canvas Background="#FFFFFFFF" Width="1920" Height="1042" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:iwm="clr-namespace:Ico.Windows.Media;assembly=IcoWPF" xmlns:gwx="clr-namespace:Ico.Gwx;assembly=GwxRuntimeCore" xmlns:is="clr-namespace:Ico.Security;assembly=IcoSecurityLogin" xmlns:gwxcmd="clr-namespace:Ico.Gwx;assembly=GwxRuntimeCoreCommands">
+  <Canvas.Resources>
+    <BitmapImage x:Key="GwxThumbnailImageKey">
+      <iwm:BitmapImageInfo.StreamSource>
+        <iwm:Base64Stream Data="iVBORw0KGgoAAAANSUhEUgAAAQAAAACKCAYAAABFLpRsAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAVuSURBVHhe7d1NaBxlHMfx/+5OtimrTbopSSNpaiE1pRGLqIl68KBps7UaPajQi6jRUhCEehDBi14KFTFNQKXx7dKDCmpFqBclBvRkFSKisTUGgrEYszULpnnb3TrzdJJowm4i0UPn9/3AdGeemR1YSr6ZedjdxC75DICkePgIQBABAIQRAEAYAQCEEQBAGAEAhBEAQBgBAIQRAEAYAQCEEQBAGAEAhBEAQBgBAIQRAEAYAQCEEQBAGAEAhBEAQBgBAIQRAEAYAQCEEQBAGAEAhBEAQBgBAIQRAEBYpP42YKFQsMnJSZuamrJisRCO6kkkEpZKpayqqtqtA6VEKgDZbNb6+/ttPver1aevCkf1eJ5n6XTatm7faemG5nAUWClSARgdHbW+vhO2u36jddxxUziqq5BMW21zW7gFrBSpOYDgFiC4/J+dnQ1HtEWo7fifMAkICCMAgDACAAgjAIAwAgAIIwCAMAIACCMAgDACAAgjAIAwAgAIIwCAsMgFYOEDMH//IMyKz8TEYsE/S+tRW9xrCxagvEh9HHhkZMR6jh+35q2VNj8/Zwfva3fjXw0O2S17drkfjng8bjXXZ2x8fNx9eUhTU5Mbi5L83LS/zFjulx+tbtet4SiwUiRvAYKmdb/+rt3f9aw9c/RVe/Dwc9Z67yF74eU33f5isWidnZ3W2tpqmUzGhoeH3XhUeMmN/rIh3AJKi94VQM9x29O4yTr33h6OLuNfBdS0dIQb0bR4BTB2lisAlBXZANzTfpvF3f3wZcGrXNrUuD/OV1QTAJQV2TmA74bO2fNPd7nx4AWeGRyytht3+2sxS+1os7iXdPtKudLnBZgDwFpENgC/Z7P22Zdf22/jFyy9eZNNT8/Yp+/0+kfFzGu42R546KB7TjAZWFtb69YDMf8yoaWlxbq7u8ORK1N+7qJlf/6WAKAsvTkAdwXQal6yMtyOIP9/lDkArEXkAtDb22M3bLu6TAB05Cs2EwCUxTsB/wPFZQ1dvh0oVdnV6ruwPzhlqVYHowv7lo7gjUBYHQFYp4l4vR05dtL+SG53S9bb9o/tYJlINNgX5/60bOIa95zgMVe5wyY3XGuffz+5eFwwFiwLx034jwM/5OxCRaOd/ua8vf3JoHvO8vOcGc3bSyf73XHB+lih1t9X744ByiEA65Twkv5vfLOHH33c7tybscyBTmvaeZ090nXIje3bf8Aee+Kwnf1pxLyKy2/OcY+JpF2KV9h7739od+3bb08+dcSNBcvicf65Z/NFd56+N96yV147Yac+Pr3sPBVu+eDUR9becbcdPfaiXZyeWzwGKIc5gHUKfguv9YctPz9jNYXzqz5ntePWcp78/KxVxaeZA0BZBCDCmATEargFAIQRAEAYAQCEEQBAGAEAhBEAQBgBAIQRAEAYAQCEEQBAGAEAhBEAQFikApBIJCyVSlkymXRfkKG6LIjH+VIQlBepTwNms1kbGBiwuckxq6tOhaN6PM+zLVtqrK6xydINzeEosFKkAlAoFCyXy9nU1JRbV7VwJVRVVeXWgVIiFQAA/w6TgIAwAgAIIwCAMAIACCMAgDACAAgjAIAwAgAIIwCAMAIACCMAgDACAAgjAIAwAgAIIwCAMAIACCMAgDACAAgjAIAwAgAIIwCAMAIACCMAgDACAAgjAIAwAgAIIwCAMAIACCMAgDACAAgjAIAwAgAIIwCAMAIACCMAgDACAAgjAIAwAgAIIwCAMAIACCMAgDACAAgjAIAwAgAIIwCAMAIACCMAgDACAAgjAIAwAgAIIwCAMAIACCMAgDACAAgjAIAwAgAIIwCAMAIACCMAgDACAAgjAIAwAgAIIwCAMAIAyDL7Cz60W2FJW7/dAAAAAElFTkSuQmCC" />
+      </iwm:BitmapImageInfo.StreamSource>
+    </BitmapImage>
+  </Canvas.Resources>
+  <gwx:GwxDocument.GwxDocument>
+    <gwx:GwxDocument FileVersion="10.97.212.00" ScanRate="500" PlatformEditMode="AGWeb" />
+  </gwx:GwxDocument.GwxDocument>
+  <is:SecurityLoginControl ShowLastLoggedUser="True" ProvideListOfExistingUsers="True" ChangePasswordButtonVisible="True" CancelButtonVisible="True" MessageBorderBrush="#FFFFFFFF" BorderThickness="3,3,3,3" Background="#FFECD2B6" Foreground="#FF000000" FontFamily="Agency FB" FontSize="12" Name="SecurityLogin1" Width="504.8" Height="324" Uid="UserControl_1" IsEnabled="True" Canvas.Left="397.4" Canvas.Top="217.4">
+    <is:SecurityLoginControl.Effect>
+      <DropShadowEffect ShadowDepth="10" Color="#FF000000" Direction="217" Opacity="1" BlurRadius="18.75" />
+    </is:SecurityLoginControl.Effect>
+    <gwx:GwxDynamicGroup.GwxDynamicGroup>
+      <gwx:GwxDynamicGroup>
+        <gwx:GwxDynamicGroup.DynamicsList>
+          <gwx:GwxPick LeftMouseButton="True" ExecuteOnUp="True" Control="True">
+            <gwx:GwxPick.CommandParameters>
+              <gwxcmd:LoadDisplayCommand FileName="home.gdfx" />
+            </gwx:GwxPick.CommandParameters>
+          </gwx:GwxPick>
+        </gwx:GwxDynamicGroup.DynamicsList>
+      </gwx:GwxDynamicGroup>
+    </gwx:GwxDynamicGroup.GwxDynamicGroup>
+  </is:SecurityLoginControl>
+</Canvas>

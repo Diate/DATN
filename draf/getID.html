@@ -1,0 +1,199 @@
+<html>
+  <head>
+    <title>ESP32-CAM QR Code Reader Stream Web Server</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <style>
+      body {
+        font-family: Arial;
+        text-align: center;
+        margin: 0px auto;
+        padding-top: 10px;
+      }
+
+      /* ----------------------------------- Slider */
+      .slidecontainer {
+        width: 100%;
+      }
+
+      .slider {
+        -webkit-appearance: none;
+        width: 50%;
+        height: 10px;
+        border-radius: 5px;
+        background: #d3d3d3;
+        outline: none;
+        opacity: 0.7;
+        -webkit-transition: 0.2s;
+        transition: opacity 0.2s;
+      }
+
+      .slider:hover {
+        opacity: 1;
+      }
+
+      .slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: #04aa6d;
+        cursor: pointer;
+      }
+
+      .slider::-moz-range-thumb {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: #04aa6d;
+        cursor: pointer;
+      }
+      /* ----------------------------------- */
+
+      /* ----------------------------------- Stream Viewer */
+      img {
+        width: auto;
+        max-width: 100%;
+        height: auto;
+      }
+      /* ----------------------------------- */
+    </style>
+  </head>
+
+  <body>
+    <h3>ESP32-CAM QR Code Reader Stream Web Server</h3>
+
+    <img src="" id="vdstream" />
+
+    <br /><br />
+
+    <div class="slidecontainer">
+      <span style="font-size: 15">LED Flash &nbsp;</span>
+      <input
+        type="range"
+        min="0"
+        max="20"
+        value="0"
+        class="slider"
+        id="mySlider"
+      />
+    </div>
+
+    <br />
+
+    <p>QR Code Scan Result :</p>
+    <div
+      style="
+        padding: 5px;
+        border: 3px solid #075264;
+        text-align: center;
+        width: 70%;
+        margin: auto;
+        color: #0a758f;
+      "
+      id="showqrcodeval"
+    ></div>
+
+    <br />
+
+    <button type="button" onclick="CopyQRCodeRslt()">Copy Result</button>
+    <button type="button" onclick="send_btn_cmd('clr')">Clear Result</button>
+
+    <script>
+      /* ----------------------------------- Calls the video stream link and displays it */
+      window.onload = document.getElementById("vdstream").src =
+        window.location.href.slice(0, -1) + ":81/stream";
+      /* ----------------------------------- */
+
+      var slider = document.getElementById("mySlider");
+
+      /* ----------------------------------- Variable declaration and timer to display QR Code reading results. */
+      var myTmr;
+      let qrcodeval = "FIUL9548";
+      start_timer();
+      /* ----------------------------------- */
+
+      /* :::::::::::::::::::::::::::::::::::::::::::::::: Update the current slider value (each time you drag the slider handle) */
+      slider.oninput = function () {
+        let slider_pwm_val = "S," + slider.value;
+        send_cmd(slider_pwm_val);
+      };
+      /* :::::::::::::::::::::::::::::::::::::::::::::::: */
+
+      /* :::::::::::::::::::::::::::::::::::::::::::::::: Function for sending commands */
+      function send_cmd(cmds) {
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "/action?go=" + cmds, true);
+        xhr.send();
+      }
+      /* :::::::::::::::::::::::::::::::::::::::::::::::: */
+
+      /* :::::::::::::::::::::::::::::::::::::::::::::::: Start and stop the timer */
+      function start_timer() {
+        myTmr = setInterval(myTimer, 500);
+      }
+
+      function stop_timer() {
+        clearInterval(myTmr);
+      }
+      /* :::::::::::::::::::::::::::::::::::::::::::::::: */
+
+      /* :::::::::::::::::::::::::::::::::::::::::::::::: Timer to get QR Code reading result and display it. */
+      function myTimer() {
+        getQRCodeVal();
+        textQRCodeVal();
+      }
+      /* :::::::::::::::::::::::::::::::::::::::::::::::: */
+
+      /* :::::::::::::::::::::::::::::::::::::::::::::::: Function to display the results of reading the QR Code. */
+      function textQRCodeVal() {
+        document.getElementById("showqrcodeval").innerHTML = qrcodeval;
+      }
+      /* :::::::::::::::::::::::::::::::::::::::::::::::: */
+
+      /* :::::::::::::::::::::::::::::::::::::::::::::::: Function to send commands to the ESP32 Cam whenever the button is clicked. */
+      function send_btn_cmd(cmds) {
+        let btn_cmd = "B," + cmds;
+        send_cmd(btn_cmd);
+      }
+      /* :::::::::::::::::::::::::::::::::::::::::::::::: */
+
+      /* :::::::::::::::::::::::::::::::::::::::::::::::: Function to copy QR Code reading result to clipboard. */
+      // Source: https://techoverflow.net/2018/03/30/copying-strings-to-the-clipboard-using-pure-javascript/
+      function CopyQRCodeRslt() {
+        // Create new element
+        var el = document.createElement("textarea");
+        // Set value (string to be copied)
+        el.value = qrcodeval;
+        // Set non-editable to avoid focus and move outside of view
+        el.setAttribute("readonly", "");
+        el.style = { position: "absolute", left: "-9999px" };
+        document.body.appendChild(el);
+        // Select text inside element
+        el.select();
+        // Copy text to clipboard
+        document.execCommand("copy");
+        // Remove temporary element
+        document.body.removeChild(el);
+        /* Alert the copied text */
+        alert("The result of reading the QR Code has been copied.");
+      }
+      /* :::::::::::::::::::::::::::::::::::::::::::::::: */
+
+      /* :::::::::::::::::::::::::::::::::::::::::::::::: Function to get QR Code reading results. */
+      function getQRCodeVal() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+          if (this.readyState == 4 && this.status == 200) {
+            qrcodeval = this.responseText;
+          }
+        };
+        xhttp.open("GET", "/getqrcodeval", true);
+        xhttp.send();
+      }
+      /* :::::::::::::::::::::::::::::::::::::::::::::::: */
+    </script>
+  </body>
+</html>

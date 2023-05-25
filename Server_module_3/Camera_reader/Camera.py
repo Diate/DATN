@@ -2,12 +2,17 @@ import cv2
 import numpy as np
 import pyzbar.pyzbar as pyzbar
 import urllib.request
+from opcua import Client
 #cap = cv2.VideoCapture(0)
 font = cv2.FONT_HERSHEY_PLAIN
 
 url='http://192.168.43.222/'
 cv2.namedWindow("Live transmission", cv2.WINDOW_AUTOSIZE)
-Data = ''
+ 
+ 
+url = "opc.tcp://localhost:4842"
+client = Client(url)
+client.connect()
 prev=""
 pres=""
 while True:
@@ -22,9 +27,11 @@ while True:
         if prev == pres:
             pass
         else:
+            getIf = client.get_node("ns=2;i=13")
             print("Type:",obj.type)
             Data = str(obj.data).split('\'')[1]
             print("Data: ",Data)
+            getIf.set_value(Data)
             prev=pres
         cv2.putText(frame, str(obj.data), (50, 50), font, 2,
                     (255, 0, 0), 3)

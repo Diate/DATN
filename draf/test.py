@@ -1,4 +1,2 @@
-var = "ssss,fffff,aaaaa,hhhh"
-
-count = var.find(",",5)
-print(count)
+x = "b'dut'"
+print(str(x).split('\'')[1])
